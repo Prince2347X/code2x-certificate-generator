@@ -5,7 +5,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import stringWidth
 
-from utils import calculate_font_size
+from utils.calculate_font_size import calculate_font_size
 
 template_pdf = "code2x_template.pdf"
 csv_file = "names.csv"
@@ -53,3 +53,5 @@ def generate_certificate(name, output_filename):
     # Step 3: Write the output PDF
     with open(output_filename, "wb") as output_file:
         writer.write(output_file)
+    print(f'Generated certificate for {name} at {output_filename}')
+    return output_filename
