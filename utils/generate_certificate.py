@@ -18,6 +18,7 @@ pdfmetrics.registerFont(TTFont(custom_font_name, custom_font_path))
 # Change the font to the custom font
 cursive_font = custom_font_name
 
+
 # Generate individual PDFs
 def generate_certificate(name, output_filename):
     # Step 1: Create a canvas overlay with the name in cursive font
@@ -53,5 +54,5 @@ def generate_certificate(name, output_filename):
     # Step 3: Write the output PDF
     with open(output_filename, "wb") as output_file:
         writer.write(output_file)
-    print(f'Generated certificate for {name} at {output_filename}')
+    print(f"Generated certificate for {name} at {output_filename}")
     return output_filename

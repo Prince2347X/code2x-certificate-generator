@@ -10,7 +10,7 @@ if __name__ == "__main__":
     from_password = ""
 
     # Connect to the SMTP server once
-    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
     server.login(from_email, from_password)
 
